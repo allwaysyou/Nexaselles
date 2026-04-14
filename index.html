@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>3D HD Screen Magnifier</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+
+    <style>
+        body { font-family: 'Poppins', sans-serif; }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .bg-premium { background: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%); }
+        .thumbnail-active { border-color: #2563eb; } 
+        /* Modal smooth slide animation */
+        .modal-slide { transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1); }
+    </style>
+</head>
+<body class="bg-gray-100 flex justify-center antialiased">
+
+    <div class="w-full max-w-md bg-white min-h-screen relative shadow-2xl sm:my-8 sm:rounded-[2rem] sm:h-[850px] flex flex-col overflow-hidden border-gray-200 sm:border-4 relative">
+        
+        <div class="absolute top-0 left-0 w-full p-5 flex justify-between items-center z-10">
+            <button class="w-10 h-10 rounded-full bg-white/70 backdrop-blur-md shadow-sm flex items-center justify-center text-gray-800 transition active:scale-95">
+                <i class="fas fa-arrow-left"></i>
+            </button>
+            <div class="bg-blue-600 px-3 py-1 rounded-full text-white text-xs font-bold tracking-wide shadow-md">
+                Top Rated
+            </div>
+        </div>
+
+        <div class="flex-1 overflow-y-auto no-scrollbar pb-28">
+            
+            <div class="relative">
+                
+                <div class="bg-premium h-[350px] w-full rounded-b-[2.5rem] flex items-center justify-center p-8 shadow-inner overflow-hidden">
+                    <img id="mainImage" src="https://i.ibb.co/4RyYD0SF/51zve-D0-S4-QL.jpg" alt="Screen Magnifier" class="w-full h-full object-cover rounded-xl shadow-lg transition-transform duration-500">
+                </div>
+
+                <div class="absolute -bottom-6 left-0 w-full px-4">
+                    <div class="grid grid-cols-5 gap-2 bg-white/90 backdrop-blur-md p-2.5 rounded-2xl shadow-xl border border-gray-100">
+                        
+                        <div class="relative aspect-square rounded-lg overflow-hidden border-2 thumbnail-active cursor-pointer" onclick="changeImage(this, 'https://i.ibb.co/4RyYD0SF/51zve-D0-S4-QL.jpg')">
+                            <img src="https://i.ibb.co/4RyYD0SF/51zve-D0-S4-QL.jpg" class="w-full h-full object-cover">
+                        </div>
+                        
+                        <div class="relative aspect-square rounded-lg overflow-hidden border-2 border-transparent cursor-pointer" onclick="changeImage(this, 'https://i.ibb.co/tp60mDDC/71e3-ITp-Lu-L-SL1500.jpg')">
+                            <img src="https://i.ibb.co/tp60mDDC/71e3-ITp-Lu-L-SL1500.jpg" class="w-full h-full object-cover">
+                        </div>
+                        
+                        <div class="relative aspect-square rounded-lg overflow-hidden border-2 border-transparent cursor-pointer" onclick="changeImage(this, 'https://i.ibb.co/vvjtqvY1/61z-M2-Tk-F8-L-SL1500.jpg')">
+                            <img src="https://i.ibb.co/vvjtqvY1/61z-M2-Tk-F8-L-SL1500.jpg" class="w-full h-full object-cover">
+                        </div>
+                        
+                        <div class="relative aspect-square rounded-lg overflow-hidden border-2 border-transparent cursor-pointer" onclick="changeImage(this, 'https://i.ibb.co/GwZw2wv/71-Tw-ND-XFi-L-SL1500.jpg')">
+                            <img src="https://i.ibb.co/GwZw2wv/71-Tw-ND-XFi-L-SL1500.jpg" class="w-full h-full object-cover">
+                        </div>
+
+                        <div class="relative aspect-square rounded-lg overflow-hidden border-2 border-transparent cursor-pointer" onclick="changeImage(this, 'https://i.ibb.co/fz8kR5zG/71wuw-FG7p-LL-SL1485.jpg')">
+                            <img src="https://i.ibb.co/fz8kR5zG/71wuw-FG7p-LL-SL1485.jpg" class="w-full h-full object-cover">
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="px-6 py-6 mt-8">
+                <h1 class="text-2xl font-bold text-gray-900 leading-tight mb-2">3D HD Screen Magnifier</h1>
+                <p class="text-gray-500 text-sm mb-4">Universal Smartphone Amplifier</p>
+                
+                <div class="flex items-center space-x-3 mb-6">
+                    <span class="text-3xl font-extrabold text-blue-600">₹599</span>
+                    <span class="text-sm text-gray-400 line-through">₹999</span>
+                    <span class="bg-green-100 text-green-700 text-xs font-bold px-2 py-1 rounded">40% OFF</span>
+                </div>
+
+                <hr class="border-gray-100 mb-6">
+
+                <div class="mb-6">
+                    <h3 class="text-sm font-semibold text-gray-900 mb-4 uppercase tracking-wider">Features</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <div class="w-10 h-10 rounded-full bg-blue-50 flex items-center justify-center text-blue-600 mr-4 shrink-0"><i class="fas fa-expand-arrows-alt"></i></div>
+                            <div>
+                                <h4 class="text-sm font-bold text-gray-900">12-Inch Display</h4>
+                                <p class="text-xs text-gray-500 mt-1">Magnifies your screen 3-4 times for a cinematic experience.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="w-10 h-10 rounded-full bg-blue-50 flex items-center justify-center text-blue-600 mr-4 shrink-0"><i class="fas fa-eye"></i></div>
+                            <div>
+                                <h4 class="text-sm font-bold text-gray-900">Eye Protection</h4>
+                                <p class="text-xs text-gray-500 mt-1">HD optical technology prevents visual fatigue and blue light.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <hr class="border-gray-100 mb-6">
+
+                <div class="mb-2">
+                    <h3 class="text-sm font-semibold text-gray-900 mb-4 uppercase tracking-wider">Customer Reviews</h3>
+                    <div class="flex items-center space-x-4 mb-6 bg-gray-50 p-4 rounded-2xl">
+                        <div class="text-4xl font-bold text-gray-900">4.8</div>
+                        <div>
+                            <div class="flex text-yellow-400 text-sm mb-1">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <p class="text-xs text-gray-500">Based on 1,204 reviews</p>
+                        </div>
+                    </div>
+                    <div class="space-y-4">
+                        <div class="bg-white border border-gray-100 p-4 rounded-xl shadow-sm">
+                            <div class="flex justify-between items-start mb-2">
+                                <div class="flex items-center space-x-2">
+                                    <div class="w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center font-bold text-blue-600 text-xs">R</div>
+                                    <div>
+                                        <p class="text-xs font-bold text-gray-900">Rahul S.</p>
+                                        <div class="flex text-yellow-400 text-[10px]"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                                    </div>
+                                </div>
+                                <span class="text-[10px] text-gray-400">2 days ago</span>
+                            </div>
+                            <p class="text-xs text-gray-600 leading-relaxed">Absolutely brilliant product! It makes watching movies on my phone feel like a mini theatre experience.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <footer class="bg-gray-900 text-white px-6 py-10 mt-6 rounded-t-[2.5rem] pb-32">
+                <div class="flex items-center justify-center space-x-2 mb-6">
+                    <i class="fas fa-shield-alt text-blue-500 text-xl"></i>
+                    <h4 class="text-lg font-bold tracking-wide">Secure Checkout</h4>
+                </div>
+                
+                <div class="grid grid-cols-2 gap-y-4 gap-x-2 text-xs text-gray-400 mb-8 border-t border-gray-800 pt-6">
+                    <button onclick="openModal('privacyModal')" class="hover:text-white flex items-center text-left"><i class="fas fa-angle-right mr-2 text-[10px]"></i> Privacy Policy</button>
+                    <button onclick="openModal('refundModal')" class="hover:text-white flex items-center text-left"><i class="fas fa-angle-right mr-2 text-[10px]"></i> Refund Policy</button>
+                    <button onclick="openModal('shippingModal')" class="hover:text-white flex items-center text-left"><i class="fas fa-angle-right mr-2 text-[10px]"></i> Shipping Policy</button>
+                    <button onclick="openModal('termsModal')" class="hover:text-white flex items-center text-left"><i class="fas fa-angle-right mr-2 text-[10px]"></i> Terms of Service</button>
+                    <button onclick="openModal('contactModal')" class="hover:text-white flex items-center text-left"><i class="fas fa-angle-right mr-2 text-[10px]"></i> Contact Us</button>
+                </div>
+                
+                <p class="text-[10px] text-gray-600 text-center">© 2026 Premium Store. All rights reserved.</p>
+            </footer>
+        </div>
+
+        <div class="absolute bottom-0 left-0 w-full bg-white/90 backdrop-blur-md px-6 py-4 border-t border-gray-100 rounded-b-[2rem] flex items-center z-10">
+            <button onclick="window.location.href='https://allwaysyou.github.io/checkout'" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-4 rounded-2xl shadow-xl shadow-blue-600/30 transition-transform active:scale-95 flex justify-center items-center gap-2">
+                <i class="fas fa-shopping-bag"></i>
+                <span>Buy Now - ₹599</span>
+            </button>
+        </div>
+
+        <div id="contactModal" class="absolute inset-0 bg-white z-50 transform translate-y-full modal-slide flex flex-col">
+            <div class="p-5 flex justify-between items-center border-b border-gray-100 bg-white">
+                <h2 class="text-lg font-bold text-gray-900">Contact Us</h2>
+                <button onclick="closeModal('contactModal')" class="w-8 h-8 bg-gray-100 rounded-full flex justify-center items-center text-gray-600"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="p-6 overflow-y-auto no-scrollbar flex-1">
+                <div class="bg-blue-50 border border-blue-100 p-4 rounded-xl mb-6 text-center">
+                    <i class="fas fa-envelope text-blue-500 text-2xl mb-2"></i>
+                    <p class="text-xs text-gray-500 mb-1">Email us directly at:</p>
+                    <a href="mailto:aamir.store@gmail.com" class="text-sm font-bold text-blue-700">aamir.store@gmail.com</a>
+                </div>
+                <form class="space-y-4">
+                    <input type="text" placeholder="Your Name" class="w-full p-3 bg-gray-50 border border-gray-200 rounded-xl text-sm outline-none focus:border-blue-500" required>
+                    <input type="email" placeholder="Email Address" class="w-full p-3 bg-gray-50 border border-gray-200 rounded-xl text-sm outline-none focus:border-blue-500" required>
+                    <textarea rows="4" placeholder="How can we help you?" class="w-full p-3 bg-gray-50 border border-gray-200 rounded-xl text-sm outline-none focus:border-blue-500 resize-none" required></textarea>
+                    <button type="button" class="w-full bg-gray-900 text-white py-3 rounded-xl font-semibold text-sm hover:bg-black transition">Send Message</button>
+                </form>
+            </div>
+        </div>
+
+        <div id="privacyModal" class="absolute inset-0 bg-white z-50 transform translate-y-full modal-slide flex flex-col">
+            <div class="p-5 flex justify-between items-center border-b border-gray-100 bg-white">
+                <h2 class="text-lg font-bold text-gray-900">Privacy Policy</h2>
+                <button onclick="closeModal('privacyModal')" class="w-8 h-8 bg-gray-100 rounded-full flex justify-center items-center text-gray-600"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="p-6 overflow-y-auto no-scrollbar flex-1 text-sm text-gray-600 space-y-4 pb-10">
+                <h3 class="font-bold text-gray-900">1. Information We Collect</h3>
+                <p>We only collect information necessary to process your order, including your name, shipping address, phone number, and email.</p>
+            </div>
+        </div>
+
+        <div id="refundModal" class="absolute inset-0 bg-white z-50 transform translate-y-full modal-slide flex flex-col">
+            <div class="p-5 flex justify-between items-center border-b border-gray-100 bg-white">
+                <h2 class="text-lg font-bold text-gray-900">Refund Policy</h2>
+                <button onclick="closeModal('refundModal')" class="w-8 h-8 bg-gray-100 rounded-full flex justify-center items-center text-gray-600"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="p-6 overflow-y-auto no-scrollbar flex-1 text-sm text-gray-600 space-y-4 pb-10">
+                <h3 class="font-bold text-gray-900">1. 7-Day Return Window</h3>
+                <p>We offer a hassle-free 7-day return policy. If you are not satisfied with your Screen Magnifier, you can request a return within 7 days of delivery.</p>
+            </div>
+        </div>
+
+        <div id="shippingModal" class="absolute inset-0 bg-white z-50 transform translate-y-full modal-slide flex flex-col">
+            <div class="p-5 flex justify-between items-center border-b border-gray-100 bg-white">
+                <h2 class="text-lg font-bold text-gray-900">Shipping Policy</h2>
+                <button onclick="closeModal('shippingModal')" class="w-8 h-8 bg-gray-100 rounded-full flex justify-center items-center text-gray-600"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="p-6 overflow-y-auto no-scrollbar flex-1 text-sm text-gray-600 space-y-4 pb-10">
+                <h3 class="font-bold text-gray-900">1. Delivery Time</h3>
+                <p>All orders are processed within 24 hours. Standard delivery takes 5-7 business days depending on your location in India.</p>
+            </div>
+        </div>
+
+        <div id="termsModal" class="absolute inset-0 bg-white z-50 transform translate-y-full modal-slide flex flex-col">
+            <div class="p-5 flex justify-between items-center border-b border-gray-100 bg-white">
+                <h2 class="text-lg font-bold text-gray-900">Terms of Service</h2>
+                <button onclick="closeModal('termsModal')" class="w-8 h-8 bg-gray-100 rounded-full flex justify-center items-center text-gray-600"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="p-6 overflow-y-auto no-scrollbar flex-1 text-sm text-gray-600 space-y-4 pb-10">
+                <h3 class="font-bold text-gray-900">1. General Overview</h3>
+                <p>By visiting our site and purchasing the 3D HD Screen Magnifier, you agree to be bound by these terms and conditions.</p>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        function changeImage(thumbnailElement, imageUrl) {
+            const mainImage = document.getElementById('mainImage');
+            mainImage.src = imageUrl;
+            mainImage.style.transform = 'scale(1.05)';
+            setTimeout(() => mainImage.style.transform = 'scale(1)', 200);
+
+            const thumbnails = Array.from(thumbnailElement.parentNode.children);
+            thumbnails.forEach(thumb => thumb.classList.remove('thumbnail-active', 'border-blue-600'));
+            thumbnails.forEach(thumb => thumb.classList.add('border-transparent'));
+
+            thumbnailElement.classList.add('thumbnail-active', 'border-blue-600');
+            thumbnailElement.classList.remove('border-transparent');
+        }
+
+        function openModal(modalId) {
+            const modal = document.getElementById(modalId);
+            modal.classList.remove('translate-y-full'); 
+        }
+
+        function closeModal(modalId) {
+            const modal = document.getElementById(modalId);
+            modal.classList.add('translate-y-full'); 
+        }
+    </script>
+
+</body>
+</html>
